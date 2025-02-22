@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Contacts List from Apex" icon-name="standard:contact">
+        <div class="slds-m-around_medium" style="height: 500px;">
+            <lightning-datatable 
+                key-field="Id"
+                show-row-number-column
+                hide-checkbox-column
+                enable-infinite-loading
+                data={data}
+                columns={columns} 
+                sorted-by={sortBy} 
+                sorted-direction={sortDirection}
+                onsort={handleSort}
+                onloadmore={handleLoadMore}
+                is-loading={isLoading}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
