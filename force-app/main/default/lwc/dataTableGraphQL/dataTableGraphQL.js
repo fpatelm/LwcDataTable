@@ -69,7 +69,7 @@ export default class DataTableGraphQL extends LightningElement {
     }
     get params() {
         return {
-            accountId: this.recordId || '001WU00000fyjknYAA',
+            accountId: this.recordId,
             pageSize: this.pageSize,
             after: this.after || null,
             sortParam: this.sortParam,
