@@ -15,7 +15,6 @@ export default class DataTableGraphQL extends LightningElement {
     sortDirection ='ASC';
     totalRecords = 0;
     pageSize = 10;
-    pageNumber = 0;
     isLoading = false;
     sortParam = {
         [this.sortBy]:{ order: this.sortDirection.toUpperCase() }
@@ -89,7 +88,6 @@ export default class DataTableGraphQL extends LightningElement {
         if(this.pageInfo?.hasNextPage) {            
             this.isLoading = true;
             this.after = this.pageInfo.endCursor;
-            this.pageNumber++;
         }
     }    
 }
